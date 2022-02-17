@@ -32,9 +32,6 @@ namespace unit {
 				this->x = x;
 				this->y = y;
 			}
-		
-
-
 	};
 	public ref class Main : public System::Windows::Forms::Form
 	{
@@ -171,31 +168,25 @@ namespace unit {
 			return _tmp;
 		}
 		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (sizeof(textBox1->Text) == 0 || sizeof(textBox2->Text) == 0 || sizeof(textBox2->Text) == 0) {
-			MessageBox::Show("Пустые данные!", "Ок", MessageBoxButtons::OK, MessageBoxIcon::Warning);
-		}
-		else {
-			pointers a, b, c;
-			a = getValues(msclr::interop::marshal_as<std::string>(textBox1->Text));
-			b = getValues(msclr::interop::marshal_as<std::string>(textBox2->Text));
-			c = getValues(msclr::interop::marshal_as<std::string>(textBox3->Text));
-			System::String^ managedString = "a : x " + a.get_x() + " y " + a.get_y();
-			label1->Text = managedString;
-			checkedListBox1->CheckedItems;
-			if (checkedListBox1->GetItemChecked(0)) {
-				double cos = (a.get_x() * b.get_x() + a.get_y() * b.get_y()) / (sqrt(pow(a.get_x(), 2) + pow(a.get_y(), 2) * (sqrt(pow(b.get_x(), 2) + pow(b.get_y(), 2)))));
-				managedString = cos.ToString();
+			if (sizeof(textBox1->Text) == 0 || sizeof(textBox2->Text) == 0 || sizeof(textBox2->Text) == 0) {
+				MessageBox::Show("Пустые данные!", "Ок", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			}
+			else {
+				pointers a, b, c;
+				a = getValues(msclr::interop::marshal_as<std::string>(textBox1->Text));
+				b = getValues(msclr::interop::marshal_as<std::string>(textBox2->Text));
+				c = getValues(msclr::interop::marshal_as<std::string>(textBox3->Text));
+				System::String^ managedString = "a : x " + a.get_x() + " y " + a.get_y();
 				label1->Text = managedString;
-				//MessageBox::Show(cos, "Ок", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+				checkedListBox1->CheckedItems;
+				if (checkedListBox1->GetItemChecked(0)) {
+					double cos = (a.get_x() * b.get_x() + a.get_y() * b.get_y()) / (sqrt(pow(a.get_x(), 2) + pow(a.get_y(), 2) * (sqrt(pow(b.get_x(), 2) + pow(b.get_y(), 2)))));
+					managedString = cos.ToString();
+					label1->Text = managedString;
+				}
+				if (checkedListBox1->GetItemChecked(1)) {
+				}
 			}
-			if (checkedListBox1->GetItemChecked(1)) {
-				//double cos = (a.get_x() * b.get_x() + a.get_y() * b.get_y()) / (sqrt(pow(a.get_x(), 2) + pow(a.get_y(), 2) * (sqrt(pow(b.get_x(), 2) + pow(b.get_y(), 2)))));
-				//managedString = cos.ToString();
-				//label1->Text = managedString;
-				//MessageBox::Show(cos, "Ок", MessageBoxButtons::OK, MessageBoxIcon::Warning);
-			}
-		
 		}
-	}
-};
+	};
 }
