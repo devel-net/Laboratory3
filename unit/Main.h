@@ -183,6 +183,7 @@ namespace unit {
 					double cos = (a.get_x() * b.get_x() + a.get_y() * b.get_y()) / (sqrt(pow(a.get_x(), 2) + pow(a.get_y(), 2) * (sqrt(pow(b.get_x(), 2) + pow(b.get_y(), 2)))));
 					managedString = cos.ToString();
 					label1->Text = managedString;
+					//some staff
 				}
 				if (checkedListBox1->GetItemChecked(1)) {
 				}
