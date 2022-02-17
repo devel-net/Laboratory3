@@ -39,15 +39,9 @@ namespace unit {
 		Main(void)
 		{
 			InitializeComponent();
-			//
-			//TODO: добавьте код конструктора
-			//
 		}
 
 	protected:
-		/// <summary>
-		/// ќсвободить все используемые ресурсы.
-		/// </summary>
 		~Main()
 		{
 			if (components)
@@ -65,18 +59,12 @@ namespace unit {
 	private: System::Windows::Forms::CheckedListBox^ checkedListBox1;
 
 	private:
-		/// <summary>
-		/// ќб€зательна€ переменна€ конструктора.
-		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// “ребуемый метод дл€ поддержки конструктора Ч не измен€йте 
-		/// содержимое этого метода с помощью редактора кода.
-		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
@@ -84,30 +72,22 @@ namespace unit {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->checkedListBox1 = (gcnew System::Windows::Forms::CheckedListBox());
 			this->SuspendLayout();
-			// 
-			// textBox1
-			// 
+
 			this->textBox1->Location = System::Drawing::Point(12, 12);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 20);
 			this->textBox1->TabIndex = 1;
-			// 
-			// textBox2
-			// 
+
 			this->textBox2->Location = System::Drawing::Point(12, 38);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(100, 20);
 			this->textBox2->TabIndex = 2;
-			// 
-			// textBox3
-			// 
+
 			this->textBox3->Location = System::Drawing::Point(12, 64);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(100, 20);
 			this->textBox3->TabIndex = 3;
-			// 
-			// button1
-			// 
+
 			this->button1->Location = System::Drawing::Point(12, 90);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(100, 23);
@@ -115,26 +95,21 @@ namespace unit {
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Main::button1_Click);
-			// 
-			// label1
-			// 
+
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(44, 168);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(35, 13);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"label1";
-			// 
-			// checkedListBox1
-			// 
+
 			this->checkedListBox1->FormattingEnabled = true;
 			this->checkedListBox1->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Sin2a", L"R" });
 			this->checkedListBox1->Location = System::Drawing::Point(12, 119);
 			this->checkedListBox1->Name = L"checkedListBox1";
 			this->checkedListBox1->Size = System::Drawing::Size(100, 34);
 			this->checkedListBox1->TabIndex = 6;
-			// Main
-			// 
+
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(127, 195);
@@ -184,8 +159,6 @@ namespace unit {
 					managedString = cos.ToString();
 					label1->Text = managedString;
 					//some staff
-				}
-				if (checkedListBox1->GetItemChecked(1)) {
 				}
 			}
 		}
